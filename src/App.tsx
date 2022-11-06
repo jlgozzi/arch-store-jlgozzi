@@ -1,12 +1,18 @@
-import React from "react";
-import logo from "./logo.svg";
-import "./App.css";
 import RoutesTree from "./routes";
+import { AppProvider } from "./context/appContext";
+import GlobalStyle from "./styles/GlobalStyle";
+import { CustomThemeProvider } from "./context/themeContext";
 
 function App() {
   return (
     <div className="App">
-      <RoutesTree />
+      <CustomThemeProvider>
+        <AppProvider>
+          <RoutesTree />
+          <GlobalStyle />
+        </AppProvider>
+      </CustomThemeProvider>
+
       {/* 
      <Provider>
       <GlobalStyle>

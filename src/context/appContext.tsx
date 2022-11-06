@@ -1,10 +1,24 @@
-import { createContext, useContext } from "react";
-import { IAppContext, IChildren } from "../interfaces";
+import { createContext, useContext, useEffect, useState } from "react";
+import { IAppContext, IChildren, IDatabaseObject } from "../interfaces";
+import { data } from "../services/api";
 
-export const AppContext = createContext<any>({} as any);
+export const AppContext = createContext<IAppContext>({} as IAppContext);
 
 export const AppProvider = ({ children }: IChildren) => {
-  return <AppContext.Provider value={""}>{children}</AppContext.Provider>;
+  const [database, setDatabase] = useState<IDatabaseObject[]>([]);
+
+  useEffect(() => {
+    async function loadData() {
+      setDatabase(() => data);
+    }
+    loadData();
+  });
+
+  return (
+    <AppContext.Provider value={{ database, setDatabase }}>
+      {children}
+    </AppContext.Provider>
+  );
 };
 
 function useAppContext(): IAppContext {

@@ -1,4 +1,12 @@
+import useThemeContext from "../../context/themeContext";
+import { CartPageStyled } from "./style";
+
 const Cart = () => {
-  return <h1>CART</h1>;
+  const { theme } = useThemeContext();
+  return (
+    <CartPageStyled theme={theme}>
+      <h1>afadfafadfadf</h1>
+    </CartPageStyled>
+  );
 };
 export default Cart;
