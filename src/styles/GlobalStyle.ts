@@ -22,6 +22,12 @@ const GlobalStyle = createGlobalStyle`
         --sucess: #3FE864;
         --negative: #E83F5B;
 
+        //cardBackground
+        --card-dark:#181B1E;
+        --card-light:#F8F9FA;
+        --card-dark-border:#1C2023;
+        --card-light-border:#DCDCDC;
+
     }
 
     body {
@@ -30,7 +36,7 @@ const GlobalStyle = createGlobalStyle`
         margin: 0;
         padding: 0;
       transition: all 0.5s linear;
-    
+    background-color: grey;
         font-family: 'Montserrat', sans-serif;
 
     }

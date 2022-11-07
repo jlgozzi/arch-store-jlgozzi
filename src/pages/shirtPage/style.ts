@@ -21,8 +21,6 @@ export const HomepageStyled = styled.div`
     margin-top: 180px;
     width: 80%;
 
-    min-height: 100vh;
-
     box-sizing: inherit;
     /* background-color: RED; */
   }
