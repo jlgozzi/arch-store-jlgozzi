@@ -120,10 +120,11 @@ export const DashboardStyled = styled.div`
   .main-paragraph {
     color: ${(props) =>
       props.theme === "dark" ? " var(--grey-3)" : " var(--grey-0)"};
-
+    width: 80%;
     font-weight: 500;
     font-size: 1rem;
     text-align: center;
+    margin-bottom: 20px;
   }
 
   @media (min-width: 420px) {

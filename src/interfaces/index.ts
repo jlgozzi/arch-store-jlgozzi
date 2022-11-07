@@ -6,6 +6,7 @@ export interface IChildren {
 
 export interface IAppContext {
   database: IDatabaseObject[];
+
   setDatabase: React.Dispatch<React.SetStateAction<IDatabaseObject[]>>;
   filterList: (name: string) => void;
   dataList: IDatabaseObject[];

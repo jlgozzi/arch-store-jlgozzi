@@ -16,7 +16,7 @@ const AccessoryPage = () => {
 
   useEffect(() => {
     filterList("Acessório");
-  });
+  }, []);
 
   return loading ? (
     <h1>Loading...</h1>

@@ -16,7 +16,7 @@ const ShirtPage = () => {
 
   useEffect(() => {
     filterList("Moda");
-  });
+  }, []);
 
   return loading ? (
     <h1>Loading...</h1>

@@ -16,7 +16,7 @@ const BookPage = () => {
 
   useEffect(() => {
     filterList("Livro");
-  });
+  }, []);
 
   return loading ? (
     <h1>Loading...</h1>

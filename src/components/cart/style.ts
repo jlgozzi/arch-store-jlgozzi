@@ -28,7 +28,7 @@ export const CartContainer = styled.div`
   }
   .cart-list > ul {
     width: 100%;
-    height: 400px;
+    height: 420px;
 
     overflow-y: auto;
 
@@ -51,19 +51,30 @@ export const CartContainer = styled.div`
 
     border-bottom: 2px solid var(--gold);
   }
+  .empty-cart {
+    width: 100%;
+    height: 420px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    font-size: 2rem;
+    opacity: 0.2;
+  }
 
   .cart-button-clear {
     width: 100%;
     border: none;
     padding: 15px;
     font-size: 1rem;
-    font-weight: 500;
+    font-weight: 600;
 
     background-color: ${(props) =>
       props.theme === "dark" ? " var(--grey-0)" : " var(--grey-4)"};
 
     color: ${(props) =>
-      props.theme === "dark" ? " var(--grey-4)" : " var(--grey-0)"};
+      props.theme === "dark" ? " var(--grey-3)" : " var(--grey-0)"};
   }
 
   @media (min-width: 1024px) {

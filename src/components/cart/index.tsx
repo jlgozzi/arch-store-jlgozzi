@@ -8,17 +8,21 @@ import ProductCartCard from "../productCartCard";
 import { CartContainer } from "./style";
 
 const Cart = () => {
-  const { cart, cartTotal } = useAppContext();
+  const { cart, cartTotal, clearCart } = useAppContext();
   const { theme } = useThemeContext();
   return (
     <CartContainer theme={theme}>
       <h2 className="cart-title">Carrinho</h2>
       <div className="cart-list">
-        <ul>
-          {cart.map((product: IDatabaseObject, index: number) => (
-            <ProductCartCard key={index} index={index} product={product} />
-          ))}
-        </ul>
+        {cart.length > 0 ? (
+          <ul>
+            {cart.map((product: IDatabaseObject, index: number) => (
+              <ProductCartCard key={index} index={index} product={product} />
+            ))}
+          </ul>
+        ) : (
+          <div className="empty-cart">Carrinho Vazio</div>
+        )}
       </div>
       <div className="cart-resume">
         <div>
@@ -30,7 +34,15 @@ const Cart = () => {
           <p>{cart.length}</p>
         </div>
       </div>
-      <button className="cart-button-clear">Limpar carrinho</button>
+      <button
+        className="cart-button-clear"
+        onClick={(event) => {
+          event.preventDefault();
+          clearCart();
+        }}
+      >
+        Limpar carrinho
+      </button>
     </CartContainer>
   );
 };

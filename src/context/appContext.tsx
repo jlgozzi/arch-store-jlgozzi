@@ -16,7 +16,7 @@ export const AppProvider = ({ children }: IChildren) => {
     }
     loadData();
     totalCart();
-  });
+  }, []);
 
   function filterList(name: string) {
     if (!name) {

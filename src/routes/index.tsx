@@ -1,3 +1,4 @@
+// import { AnimatePresence } from "framer-motion";
 import { Navigate, Route, Routes } from "react-router-dom";
 import AccessoryPage from "../pages/accessoryPage";
 import BookPage from "../pages/bookPage";
@@ -8,7 +9,7 @@ import ShirtPage from "../pages/shirtPage";
 
 const RoutesTree = () => {
   return (
-    // animate presence
+    // <AnimatePresence>
     <Routes>
       <Route path={"/dashboard"} element={<Dashboard />} />
       <Route path={"/homepage"} element={<Homepage />} />
@@ -18,6 +19,7 @@ const RoutesTree = () => {
       <Route path={"/accessorypage"} element={<AccessoryPage />} />
       <Route path="*" element={<Navigate replace to="/dashboard" />} />
     </Routes>
+    // </AnimatePresence>
   );
 };
 
