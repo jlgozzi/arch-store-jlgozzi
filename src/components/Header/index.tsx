@@ -2,8 +2,9 @@
 // import useAppContext from "../../context/appContext";
 import useThemeContext from "../../context/themeContext";
 import { HeaderStyled } from "./style";
-import { BsLightbulbOffFill } from "react-icons/bs";
+import { BsLightbulbFill } from "react-icons/bs";
 import { BsLightbulbOff } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   // const teste = useParams();
@@ -11,9 +12,10 @@ const Header = () => {
 
   return (
     <HeaderStyled>
-      <div className="header-top-line"></div>
       <div className="header-container">
-        <span>Arch-Store</span>
+        <Link to={`/dashboard`}>
+          <span>Arch-Store</span>
+        </Link>
 
         <button
           onClick={(event) => {
@@ -21,7 +23,7 @@ const Header = () => {
             changeTheme();
           }}
         >
-          {theme === "dark" ? <BsLightbulbOffFill /> : <BsLightbulbOff />}
+          {theme === "dark" ? <BsLightbulbOff /> : <BsLightbulbFill />}
         </button>
       </div>
     </HeaderStyled>

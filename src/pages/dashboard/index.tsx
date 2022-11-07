@@ -1,8 +1,11 @@
 // import useAppContext from "../../context/appContext";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import Header from "../../components/Header";
 import { DashboardStyled } from "./style";
 import useThemeContext from "../../context/themeContext";
+
+import banner from "../../assets/banner2.avif";
+import Footer from "../../components/Footer";
 
 const Dashboard = () => {
   // const { database } = useAppContext();
@@ -17,14 +20,20 @@ const Dashboard = () => {
     <DashboardStyled theme={theme}>
       <Header />
       <main>
-        <h1 className="main-title blinkCursor">Bem Vindo!</h1>
+        <div className="main-container">
+          <h1 className="main-title blinkCursor">Bem Vindo!</h1>
+          <p className="main-paragraph">
+            Esta é a Arch-Store, dê uma olhada em nossos produtos!
+          </p>
+          <Link to={`/homepage`}>
+            <button className="main-button">Ver Produtos</button>
+          </Link>
+        </div>
         <figure>
-          <img src="" alt="" />
+          <img src={banner} alt="banner" />
         </figure>
-        <button>Ver Produtos</button>
       </main>
-
-      {/* <img src={database[0]?.img} alt={database[0]?.title}></img> */}
+      <Footer />
     </DashboardStyled>
   );
 };
