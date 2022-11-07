@@ -7,6 +7,13 @@ export interface IChildren {
 export interface IAppContext {
   database: IDatabaseObject[];
   setDatabase: React.Dispatch<React.SetStateAction<IDatabaseObject[]>>;
+  filterList: (name: string) => void;
+  dataList: IDatabaseObject[];
+  cart: IDatabaseObject[];
+  addCart: (item: IDatabaseObject) => void;
+  removeCart: (item: IDatabaseObject) => void;
+  clearCart: () => void;
+  cartTotal: number;
 }
 
 export interface IThemeContext {
@@ -18,6 +25,7 @@ export interface IThemeContext {
 }
 
 export interface IDatabaseObject {
+  id: number;
   title: string;
   description: string;
   price: number;

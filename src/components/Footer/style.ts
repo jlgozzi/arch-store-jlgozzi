@@ -14,6 +14,7 @@ export const FooterStyled = styled.footer`
   position: static;
   bottom: 0;
   width: 100%;
+  max-width: 100vw;
 
   margin-top: 50px;
 
@@ -21,6 +22,9 @@ export const FooterStyled = styled.footer`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  /* position: sticky;
+  bottom: 0; */
   div {
     height: 80px;
 

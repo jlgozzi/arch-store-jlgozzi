@@ -21,8 +21,6 @@ export const HomepageStyled = styled.div`
     margin-top: 180px;
     width: 80%;
 
-    min-height: 100vh;
-
     box-sizing: inherit;
     /* background-color: RED; */
   }
@@ -31,9 +29,9 @@ export const HomepageStyled = styled.div`
     color: ${(props) =>
       props.theme === "dark" ? " var(--grey-0)" : " var(--grey-4)"};
   }
-
+  /* 
   main ul {
-    /* background-color: blue; */
+   
     margin: 0 auto;
     display: flex;
     justify-content: start;
@@ -42,7 +40,7 @@ export const HomepageStyled = styled.div`
 
     height: 500px;
     overflow: auto;
-  }
+  } */
 
   @media (min-width: 420px) {
     .main-title {
@@ -53,20 +51,20 @@ export const HomepageStyled = styled.div`
     main {
       height: 100%;
     }
-    main ul {
-      /* background-color: blue; */
+    /* main ul {
+      background-color: blue;
       height: 100%;
       flex-wrap: wrap;
       overflow: unset;
     }
     main ul li {
       height: 500px;
-    }
-    main ul li:hover {
+    } */
+    /* main ul li:hover {
       box-shadow: 0 0 0.5em black;
       transform: scale(1.05);
       transition: 0.5s;
       border: 3px solid transparent;
-    }
+    } */
   }
 `;

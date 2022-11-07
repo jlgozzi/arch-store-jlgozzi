@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const HeaderStyled = styled.header`
   height: 57px;
   width: 100%;
+  max-width: 100vw;
   background-color: var(--grey-4);
   color: var(--grey-0);
   box-shadow: 0 0 1.5em black;

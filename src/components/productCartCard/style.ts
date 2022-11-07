@@ -1,9 +1,8 @@
 import styled from "styled-components";
 
-export const Product = styled.li`
-  height: 95%;
-  width: 250px;
-
+export const ProductCart = styled.li`
+  height: 120px;
+  width: 90%;
   background-color: ${(props) =>
     props.theme === "dark" ? " var(--card-dark)" : " var(--card-light)"};
   color: ${(props) =>
@@ -17,19 +16,19 @@ export const Product = styled.li`
         : " var( --card-light-border)"};
 
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: flex-end;
+  align-items: flex-start;
+
+  /* background-color: red; */
 
   figure {
-    height: 300px;
-    width: 100%;
+    display: none;
+    height: 100px;
 
-    display: flex;
-    justify-content: center;
+    /* background-color: green; */
   }
   figure img {
-    height: 200px;
+    height: 100px;
     border-radius: 8px;
   }
 
@@ -51,34 +50,33 @@ export const Product = styled.li`
   div p {
     font-size: 1rem;
   }
-  button {
-    width: 100%;
-    margin: 0 auto;
 
+  button {
+    width: 30px;
+    height: 30px;
+
+    margin: 0 auto;
     margin-top: 10px;
-    background-color: var(--gold);
+
+    background-color: transparent;
 
     color: ${(props) =>
       props.theme === "dark" ? " var(--grey-0)" : " var(--grey-4)"};
-    padding: 5px;
-
-    border-radius: 4px;
-
     font-size: 1rem;
     font-weight: 600;
 
     border: 5px solid transparent;
   }
-  button:hover {
-    background-color: ${(props) =>
-      props.theme === "dark" ? " var(--grey-3)" : " var(--platinum)"};
-    border-bottom: 5px solid var(--gold);
+  button:hover svg {
+    color: ${(props) =>
+      props.theme === "dark" ? " var(--platinum)" : " var(--grey-2)"};
 
     transition: 0.5s;
   }
-  button:active {
+  button:active svg {
+    color: var(--negative);
     transform: scale(0.97);
-    transition: 0.5s;
+    transition: 0.25s;
   }
   .price {
     font-size: 1rem;
@@ -91,5 +89,11 @@ export const Product = styled.li`
     font-weight: 500;
     font-size: 0.8rem;
     background-color: var(--gold);
+  }
+
+  @media (min-width: 768px) {
+    figure {
+      display: block;
+    }
   }
 `;

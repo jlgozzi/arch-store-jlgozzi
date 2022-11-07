@@ -5,6 +5,7 @@ export const SubHeaderStyled = styled.header`
 
   height: 90px;
   width: 100%;
+  max-width: 100vw;
   background-color: ${(props) =>
     props.theme === "dark" ? " var(--grey-3)" : " var(--grey-4)"};
   color: var(--grey-0);
@@ -28,6 +29,9 @@ export const SubHeaderStyled = styled.header`
     align-items: center;
     gap: 10px;
   }
+  .sub-header-input-cart {
+    position: relative;
+  }
   ul {
     width: 100%;
     display: flex;
@@ -38,12 +42,17 @@ export const SubHeaderStyled = styled.header`
 
     /* overflow: auto; */
   }
+
   ul li {
     font-size: 0.7rem;
     font-weight: 500;
     cursor: pointer;
   }
-  ul li:hover {
+  a {
+    text-decoration: none;
+    color: var(--grey-0);
+  }
+  a:hover {
     color: var(--gold);
 
     transition: 0.5s;
@@ -88,10 +97,16 @@ export const SubHeaderStyled = styled.header`
     background-color: transparent;
     border: none;
   }
-  button:hover svg {
+  svg:hover {
     color: var(--gold);
 
     transition: 0.5s;
+  }
+  .cart-number {
+    transition: 0.5s;
+    position: absolute;
+    top: -12px;
+    right: 4px;
   }
 
   @media (min-width: 425px) {
@@ -108,7 +123,8 @@ export const SubHeaderStyled = styled.header`
       gap: 30px;
     }
   }
-  @media (min-width: 1440px) {
+  @media (min-width: 1024px) {
+    overflow-x: unset;
     .sub-header-container {
       flex-direction: row;
     }
@@ -118,7 +134,7 @@ export const SubHeaderStyled = styled.header`
       gap: 30px;
     }
     .sub-header-container input {
-      height: 30px;
+      height: 25px;
     }
   }
 `;
