@@ -14,7 +14,8 @@ const GlobalStyle = createGlobalStyle`
         --grey-1: #868E96;
         --grey-0: #F8F9FA;
 
-        //gold
+
+        --platinum: #E6E6E6;
         --gold: #d79d39;
 
         //feedback pallete
